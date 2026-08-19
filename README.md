@@ -23,8 +23,6 @@ The demo shows:
 - final pipeline status
 - analytical tables and charts
 
-> Replace `YOUR_VIDEO_URL` with the URL of your uploaded demo video and place the thumbnail at `src/docs/demo-thumbnail.png`.
-
 ---
 
 # 📌 Project Overview
