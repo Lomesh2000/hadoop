@@ -10,6 +10,17 @@ The pipeline was validated on the original NASA trace containing **3,461,612 web
 
 > **▶ Click the preview below to watch the complete pipeline demo.**
 
+## 🎥 Demo
+
+<p align="center">
+  <a href="./src/docs/demo.webm">
+    <img src="./src/docs/demo.gif" alt="NASA Log Analytics Demo" width="100%">
+  </a>
+</p>
+
+> Live execution of the NASA log analytics pipeline, including Hadoop MapReduce,
+> Q1/Q2/Q3 results, execution timings, data-quality checks, and the dashboard.
+
 [![NASA Log Analytics Demo](src/docs/demo-thumbnail.png)](YOUR_VIDEO_URL)
 
 The demo shows:
