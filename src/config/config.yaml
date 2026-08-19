@@ -1,0 +1,37 @@
+pipeline:
+  name: "NASA Web Server Log Analytics"
+  version: "2.1.0"
+  author: "Lomesh Soni"
+  environment: "development"
+  top_n_resources: 20
+
+database:
+  backend: "sqlite" # options: "sqlite", "mysql"
+  sqlite:
+    path: "/tmp/nasalog_analytics.db"
+  mysql:
+    host: "localhost"
+    port: 3306
+    user: "root"
+    database: "nasadb"
+    password_env_var: "DB_PASSWORD" # Read password securely from environment
+
+hadoop:
+  streaming_jar: "" # Auto-detected or specify /path/to/hadoop-streaming.jar
+  hdfs_input_dir: "/data/nasa/input"
+  hdfs_output_dir: "/data/nasa/output"
+  num_reducers_q1: 4
+  num_reducers_q2: 1 # Strictly 1 for single-stage global Top-N
+  num_reducers_q3: 4
+
+data_quality:
+  enforce_strict_gate: true
+  max_malformed_percentage: 5.0 # Max allowable SLA malformed threshold (%)
+  expected_checks:
+    - "DQ-01" # Ingestion Accounting Balance
+    - "DQ-02" # Cross-Job Total Request Invariant (Q1 == Q3)
+    - "DQ-03" # Hourly Error Bounds & Rate Formula
+    - "DQ-04" # Daily Traffic Key & Metric Integrity
+    - "DQ-05" # Top Resources Monotonic Ordering & Cardinality
+    - "DQ-06" # Critical Attributes Non-Nullability
+    - "DQ-07" # Malformed Record Rate Threshold
