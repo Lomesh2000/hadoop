@@ -21,7 +21,7 @@ The pipeline was validated on the original NASA trace containing **3,461,612 web
 > Live execution of the NASA log analytics pipeline, including Hadoop MapReduce,
 > Q1/Q2/Q3 results, execution timings, data-quality checks, and the dashboard.
 
-[![NASA Log Analytics Demo](src/docs/demo-thumbnail.png)](YOUR_VIDEO_URL)
+[![NASA Log Analytics Demo](/workspaces/hadoop/src/docs/demo.webm](/workspaces/hadoop/src/docs/demo.webm)
 
 The demo shows:
 
