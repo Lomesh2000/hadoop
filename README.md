@@ -5,6 +5,7 @@ An end-to-end **Data Engineering and Analytics pipeline** for processing the ori
 The pipeline was validated on the original NASA trace containing **3,461,612 web requests** and produces daily traffic analytics, global Top-N requested resources, and hourly HTTP error-rate analysis.
 
 ---
+<video src="./src/docs/demo.mp4" controls width="100%"></video>
 
 ## 🎥 Demo
 
